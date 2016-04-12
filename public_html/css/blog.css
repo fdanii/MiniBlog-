@@ -32,3 +32,23 @@ main {
     color: #999;
     font-style: italic;
 }
+
+.content {
+    padding-top: 57px;
+    padding-left: 10px;
+}
+
+html {
+   font-family: 'Inconsolata';
+ }
+ 
+ header, main, footer {
+     padding-left: 240px;
+   }
+
+   @media only screen and (max-width : 992px) {
+     header, main, footer {
+       padding-left: 0;
+     }
+   }
+   

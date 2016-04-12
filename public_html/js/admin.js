@@ -27,7 +27,14 @@ $(function (){
         var addBlogTemplate = Handlebars.compile(addBlogScript);
     
         $('.main-container').html(addBlogTemplate);
-       // tinymce.init({ selector:'textarea' });
+        tinymce.init({ selector:'textarea', plugins: [
+                "advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime media table contextmenu paste"
+        ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter align bnb nb bn nbb nnb nbnb  nb  bn nnbbnbnn bn nbn b bbnbnnb nb nb nnb n bnbnright alignjustify | bullist numlist outdent indent | link image"
+        
+           });
     });
     $(document).on('submit','.form-add-blog', function (event){
         event.preventDefault();
